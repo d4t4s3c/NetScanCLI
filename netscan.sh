@@ -56,7 +56,7 @@ f1=$(ping -c 1 $1 | grep "ttl" | awk {'print $6'} | tr -d 'ttl=') > /dev/null 2>
 	    echo -e "$r$cu4 $b$v2$v    $cy$v7"
     else
             echo ""
-	    echo -e "$r$cu4 $v8$nc"
+	    echo -e "$r$cu4 $v8"
             echo ""
             echo -e "$a$cu3 $v9"
 	    exit 1
@@ -66,4 +66,4 @@ f2=$(nmap -n -sS -p- --min-rate 5000 $1 | grep "open" | awk '{print $1}' | tr -d
 echo -e "$az$cu2 $b$v3 $cy$f2"
 f3=$(nmap -n -sC -sV -p$f2 $1 | grep -v -E "Starting|report|up|done")
 echo -e "$v$cu1 $b$v4"
-echo -e "$cy $f3"
+echo -e "$cy $f3 $nc"
