@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#Author:  d4t4s3c 
+#Twitter: @d4t4s3c
+#Email:   d4t4s3c@protonmail.com
+#GitHub:  www.github.com/d4t4s3c
+
 #colors
 b="\033[1;37m"
 r="\033[1;31m"
