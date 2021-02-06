@@ -2,6 +2,12 @@
 
 **Simple scanner in bash**
 
+**Install**
+```bash
+root@kali:~# cd /opt
+root@kali:~# wget "https://raw.githubusercontent.com/d4t4s3c/NetScanCLI/main/netscan.sh"
+root@kali:~# chmod +x netscan.sh
+```
 **Alias**
 
 - Bash       -> echo "alias netscan='/opt/netscan.sh'" >> /root/.bashrc
