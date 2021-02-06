@@ -2,7 +2,7 @@
 
 **Simple scanner in bash**
 
-(Check: TTL - OS - Open Ports & Nmap Version Detection & Nmap Script Default)
+(Check: TTL - OS - (1-65535) Open Ports & Nmap Version Detection & Nmap Script Default)
 
 **Linux**
 
