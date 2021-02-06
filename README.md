@@ -10,6 +10,8 @@
 
 **(Close terminal and reopen again)**
 
+**Info**
+
 (Check: TTL - OS - (1-65535) Open Ports & Nmap Version Detection & Nmap Script Default)
 
 **Linux**
