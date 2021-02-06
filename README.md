@@ -8,7 +8,7 @@
 - Zsh        -> echo "alias netscan='/opt/netscan.sh'" >> /root/.zshrc
 - Powerlevel -> echo "alias netscan='/opt/netscan.sh'" >> /root/.p10k.zsh
 
-**(Close terminal and reopen again)**
+(Close terminal and reopen again)
 
 **Info**
 
