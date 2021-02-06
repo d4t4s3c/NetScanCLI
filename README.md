@@ -7,6 +7,7 @@
 - Bash       -> echo "alias netscan='/opt/netscan.sh'" >> /root/.bashrc
 - Zsh        -> echo "alias netscan='/opt/netscan.sh'" >> /root/.zshrc
 - Powerlevel -> echo "alias netscan='/opt/netscan.sh'" >> /root/.p10k.zsh
+
 **(Close terminal and reopen again)**
 
 (Check: TTL - OS - (1-65535) Open Ports & Nmap Version Detection & Nmap Script Default)
