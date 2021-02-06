@@ -7,3 +7,11 @@
 **Linux**
 
 ![](/1.png)
+
+**Windows**
+
+![](/2.png)
+
+**Solaris**
+
+![](/3.png)
