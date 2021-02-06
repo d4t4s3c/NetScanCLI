@@ -67,3 +67,4 @@ echo -e "$az$cu2 $b$v3 $cy$f2"
 f3=$(nmap -n -sC -sV -p$f2 $1 | grep -v -E "Starting|report|up|done")
 echo -e "$v$cu1 $b$v4"
 echo -e "$cy $f3 $nc"
+exit 0
