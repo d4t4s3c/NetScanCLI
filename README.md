@@ -10,8 +10,8 @@ root@kali:~# chmod +x netscan.sh
 ```
 **Alias**
 
-- Bash -------> echo "alias netscan='/opt/netscan.sh'" >> /root/.bashrc
-- Zsh --------> echo "alias netscan='/opt/netscan.sh'" >> /root/.zshrc
+- Bash --------> echo "alias netscan='/opt/netscan.sh'" >> /root/.bashrc
+- Zsh ---------> echo "alias netscan='/opt/netscan.sh'" >> /root/.zshrc
 - Powerlevel -> echo "alias netscan='/opt/netscan.sh'" >> /root/.p10k.zsh
 
 (Close terminal and reopen again)
