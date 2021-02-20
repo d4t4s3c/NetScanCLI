@@ -28,6 +28,8 @@ v6='Windows'
 v7='Solaris'
 v8="Error TTL not detected, host dropped or filtered by Firewall/IDS"
 v9='Usage: netscan <HOST>'
+
+
 f1=$(ping -c 1 $1 | grep "ttl" | awk {'print $6'} | tr -d 'ttl=') > /dev/null 2>&1
 
     if [ "$(echo $f1)" == "64" ]; then
