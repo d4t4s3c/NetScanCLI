@@ -3,7 +3,7 @@
 **Simple scanner in bash**
 
 **Install**
-```bash
+```cmd
 root@kali:~# cd /opt
 root@kali:~# wget "https://raw.githubusercontent.com/d4t4s3c/NetScanCLI/main/netscan.sh"
 root@kali:~# chmod +x netscan.sh
