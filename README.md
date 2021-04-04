@@ -22,8 +22,8 @@ root@kali:~# chmod +x netscan.sh
 
 **Linux**
 
-![](/01.png)
+![](/cap1.png)
 
 **Windows**
 
-![](/02.png)
+![](/cap2.png)
