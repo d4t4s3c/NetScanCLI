@@ -40,7 +40,6 @@ declare -r v9='Usage: netscan <HOST>'
 declare -r v10='sV,sC'
 
 function banner(){
-
 echo -e "$GreenLight          ";
 echo -e "┌┐┌┌─┐┌┬┐┌─┐┌─┐┌─┐┌┐┌";
 echo -e "│││├┤  │ └─┐│  ├─┤│││";
