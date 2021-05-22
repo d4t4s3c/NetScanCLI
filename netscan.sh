@@ -28,23 +28,23 @@ declare -r cu1='[+]'
 declare -r cu2='[*]'
 declare -r cu3='[i]'
 declare -r cu4='[x]'
-declare -r v1='TTL'
-declare -r v2='OS'
-declare -r v3='Ports'
-declare -r v4='Nmap'
+declare -r v1='TTL:'
+declare -r v2='OS:'
+declare -r v3='Ports:'
+declare -r v4='Nmap:'
 declare -r v5='Linux'
 declare -r v6='Windows'
 declare -r v7='Solaris'
 declare -r v8="Error TTL not detected, host dropped or filtered by Firewall/IDS"
 declare -r v9='Usage: netscan <HOST>'
-declare -r v10='sV,sC'
 
 function banner(){
-echo -e "$GreenLight          ";
-echo -e "┌┐┌┌─┐┌┬┐┌─┐┌─┐┌─┐┌┐┌";
-echo -e "│││├┤  │ └─┐│  ├─┤│││";
-echo -e "┘└┘└─┘ ┴ └─┘└─┘┴ ┴┘└┘";
-echo -e "$End                 ";
+echo ""
+echo -e "$white===============================================================$End"
+echo -e "$GreenLight┌┐┌┌─┐┌┬┐┌─┐┌─┐┌─┐┌┐┌$End"
+echo -e "$GreenLight│││├┤  │ └─┐│  ├─┤│││$End"
+echo -e "$GreenLight┘└┘└─┘ ┴ └─┘└─┘┴ ┴┘└┘$End"
+echo -e "$white===============================================================$End"
 }
 
 banner
@@ -52,35 +52,37 @@ banner
 f1=$(ping -c 1 $1 | grep "ttl" | awk {'print $6'} | tr -d 'ttl=') > /dev/null 2>&1
 
     if [ "$(echo $f1)" == "64" ]; then
-	    echo -e "$YellowLight$cu3 $White$v1$MagentaLight ────> $CyanLight$f1"
-	    echo -e "$RedLight$cu4 $White$v2$MagentaLight ─────> $CyanLight$v5"
+	    echo -e "$White[$GreenLight+$White] $White$v1       $GreenLight$f1$End"
+	    echo -e "$White[$GreenLight+$White] $White$v2        $GreenLight$v5$End"
     elif [ "$(echo $f1)" == "63" ]; then
-	    echo -e "$YellowLight$cu3 $White$v1$MagentaLight ────> $CyanLight$f1"
-	    echo -e "$RedLight$cu4 $White$v2$MagentaLight ─────> $CyanLight$v5"
+	    echo -e "$White[$GreenLight+$White] $White$v1       $GreenLight$f1$End"
+	    echo -e "$White[$GreenLight+$White] $White$v2        $GreenLight$v5$End"
     elif [ "$(echo $f1)" == "128" ]; then
-	    echo -e "$YellowLight$cu3 $White$v1$MagentaLight ────> $CyanLight$f1"
-	    echo -e "$RedLight$cu4 $White$v2$MagentaLight ─────> $CyanLight$v6"
+	    echo -e "$White[$GreenLight+$White] $White$v1       $GreenLight$f1$End"
+	    echo -e "$White[$GreenLight+$White] $White$v2        $GreenLight$v6$End"
     elif [ "$(echo $f1)" == "127" ]; then
-	    echo -e "$YellowLight$cu3 $White$v1$MagentaLight ────> $CyanLight$f1"
-	    echo -e "$RedLight$cu4 $White$v2$MagentaLight ─────> $CyanLight$v6"
+	    echo -e "$White[$GreenLight+$White] $White$v1       $GreenLight$f1$End"
+	    echo -e "$White[$GreenLight+$White] $White$v2        $GreenLight$v6$End"
     elif [ "$(echo $f1)" == "255" ]; then
-	    echo -e "$YellowLight$cu3 $White$v1$MagentaLight ────> $CyanLight$f1"
-	    echo -e "$RedLight$cu4 $White$v2$MagentaLight ─────> $CyanLight$v7"
+	    echo -e "$White[$GreenLight+$White] $White$v1       $GreenLight$f1$End"
+	    echo -e "$White[$GreenLight+$White] $White$v2        $GreenLight$v7$End"
     elif [ "$(echo $f1)" == "254" ]; then
-	    echo -e "$YellowLight$cu3 $White$v1$MagentaLight ────> $CyanLight$f1"
-	    echo -e "$RedLight$cu4 $White$v2$MagentaLight ─────> $CyanLight$v7"
+	    echo -e "$White[$GreenLight+$White] $White$v1       $GreenLight$f1$End"
+	    echo -e "$White[$GreenLight+$White] $White$v2        $GreenLight$v7$End"
     else
             echo ""
-	    echo -e "$RedLight$cu4 $v8"
+	    echo -e "$RedLight$cu4 $v8$End"
             echo ""
-            echo -e "$YellowLight$cu3 $v9"
+            echo -e "$YellowLight$cu3 $v9$End"
             echo ""
 	    exit 1
     fi
 
 f2=$(nmap -n -sS -p- --min-rate 5000 $1 | grep "open" | awk '{print $1}' | tr -d '/tcp' | xargs | tr " " ",")
-echo -e "$BlueLight$cu2 $White$v3$MagentaLight ──> $CyanLight$f2"
+echo -e "$White[$GreenLight+$White] $White$v3     $GreenLight$f2$End"
 f3=$(nmap -n -sC -sV -p$f2 $1 | grep -v -E "Starting|report|up|done")
-echo -e "$GreenLight$cu1 $White$v4$MagentaLight ───> $CyanLight$v10"
-echo -e "$CyanLight $f3 $End"
+echo -e "$White[$GreenLight+$White] $White$v4$End"
+echo -e "$GreenLight $f3 $End"
+echo ""
+echo -e "$white===============================================================$End"
 exit 0
