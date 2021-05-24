@@ -40,11 +40,11 @@ declare -r v9='Usage: netscan <HOST>'
 
 function banner(){
 echo ""
-echo -e "$white===============================================================$End"
+echo -e "$White===============================================================$End"
 echo -e "$GreenLight┌┐┌┌─┐┌┬┐┌─┐┌─┐┌─┐┌┐┌$End"
 echo -e "$GreenLight│││├┤  │ └─┐│  ├─┤│││$End"
 echo -e "$GreenLight┘└┘└─┘ ┴ └─┘└─┘┴ ┴┘└┘$End"
-echo -e "$white===============================================================$End"
+echo -e "$White===============================================================$End"
 }
 
 banner
@@ -84,5 +84,5 @@ f3=$(nmap -n -sC -sV -p$f2 $1 | grep -v -E "Starting|report|up|done")
 echo -e "$White[$GreenLight+$White] $White$v4$End"
 echo -e "$GreenLight $f3 $End"
 echo ""
-echo -e "$white===============================================================$End"
+echo -e "$White===============================================================$End"
 exit 0
