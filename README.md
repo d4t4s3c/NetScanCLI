@@ -2,13 +2,20 @@
 
 **Simple scanner in bash**
 
-**Install**
+---
+
+**Run**
 ```cmd
-root@kali:~# cd /opt
-root@kali:~# wget "https://raw.githubusercontent.com/d4t4s3c/NetScanCLI/main/netscan.sh"
-root@kali:~# chmod +x netscan.sh
+root@kali:~# netscan <host>
 ```
-**Alias**
+
+**Download / Install**
+```cmd
+root@kali:~# wget "https://raw.githubusercontent.com/d4t4s3c/NetScanCLI/main/netscan.sh" -O /opt/netscan.sh
+root@kali:~# chmod +x /opt/netscan.sh
+```
+
+**Add Alias**
 
 - Bash --------> `root@kali:~# echo "alias netscan='/opt/netscan.sh'" >> /root/.bashrc`
 - Zsh ---------> `root@kali:~# echo "alias netscan='/opt/netscan.sh'" >> /root/.zshrc`
@@ -20,6 +27,8 @@ root@kali:~# chmod +x netscan.sh
 
 (Check: TTL - OS - (1-65535) Open Ports & Nmap Version Detection & Nmap Script Default)
 
+---
+
 **Linux**
 
 ![](/1.png)
@@ -27,3 +36,5 @@ root@kali:~# chmod +x netscan.sh
 **Windows**
 
 ![](/2.png)
+
+---
